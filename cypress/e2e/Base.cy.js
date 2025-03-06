@@ -12,6 +12,7 @@ describe('Health Insurance Application', function() {
     
     // Fill personal details
     cy.fillProposerDetails();
+    cy.wait(5000);    
     
     // // Select destination and purpose
     // cy.selectDestinationAndPurpose();

@@ -37,10 +37,12 @@ Cypress.Commands.add('fillQuotePage', () => {
     cy.get('.mat-dialog-actions > .mat-raised-button').click();
     cy.url().should('contain','star')
     cy.get('#mat-select-value-23').click();
+    cy.wait(3000);
     cy.get('#mat-option-125').click();
     cy.fillInput("#mat-input-21", "SK");
     cy.fillInput("#mat-input-23", "Test");
     cy.fillInput("#mat-input-25", "sakthi@test.com");
+
    
     cy.fillInput("#mat-input-29", "8967345422");
     cy.fillInput("#mat-input-30", "165");
@@ -54,4 +56,5 @@ Cypress.Commands.add('fillQuotePage', () => {
   
   Cypress.Commands.add('fillInput', (selector, value) => {
     cy.get(selector).type(value);
+    cy.wait(500);
   });
